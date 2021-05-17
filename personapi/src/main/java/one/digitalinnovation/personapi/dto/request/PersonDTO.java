@@ -5,7 +5,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.br.CPF;
-
 import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
@@ -28,14 +27,14 @@ public class PersonDTO {
     @Size(min = 2, max = 100)
     private String lastName;
 
-    @NotEmpty
-    @CPF
+   @NotEmpty
+   @CPF
     private String cpf;
 
     @NotNull
     private String birthDate;
 
     @Valid
-    @NotEmpty
+   @NotEmpty
     private List<PhoneDTO> phones;
 }
